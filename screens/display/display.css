@@ -36,23 +36,13 @@ body.display-mode {
 
 .team {
   min-width: 0;
-  flex: 1 1 42%;
   max-width: 42%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: clamp(8px, 1.8vh, 16px);
-}
-
-.team-left {
-  justify-items: start;
-  text-align: left;
-}
-
-.team-right {
-  justify-items: end;
-  text-align: right;
 }
 
 .team-name {
@@ -71,7 +61,7 @@ body.display-mode {
 .score {
   align-self: center;
   font-size: clamp(164px, 53vh, 252px);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.82;
   font-variant-numeric: tabular-nums;
   color: #111111;
@@ -80,8 +70,8 @@ body.display-mode {
 .divider {
   align-self: center;
   font-size: clamp(108px, 36vh, 178px);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.8;
   margin-top: clamp(26px, 4vh, 44px);
-  color: #5f6368;
+  color: #9c9c9c;
 }
