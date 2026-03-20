@@ -6,6 +6,10 @@
 - `control.html` → auf iPhone oder Laptop zum Steuern
 - `firebase-config.js` → Platzhalter im Repo (keine echten Werte)
 - `firebase-config.template.js` → wird in CI mit Secrets nach `firebase-config.js` gerendert
+- `styles/base.css` → globale Basis-Styles (inkl. Inter Font)
+- `screens/control/control.css` → Control-spezifische Styles
+- `screens/display/display.css` → Display-spezifische Styles
+- `screens/clock/clock.css` → Clock-spezifische Styles
 
 ## Setup
 
