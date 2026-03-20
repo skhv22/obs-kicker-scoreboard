@@ -18,8 +18,10 @@ const el = {
   roomOpenBtn: document.getElementById('roomOpenBtn'),
   displayUrl: document.getElementById('displayUrl'),
   controlUrl: document.getElementById('controlUrl'),
+  clockUrl: document.getElementById('clockUrl'),
   copyDisplayBtn: document.getElementById('copyDisplayBtn'),
   copyControlBtn: document.getElementById('copyControlBtn'),
+  copyClockBtn: document.getElementById('copyClockBtn'),
   connectionBadge: document.getElementById('connectionBadge'),
   eventTitleInput: document.getElementById('eventTitleInput'),
   teamANameInput: document.getElementById('teamANameInput'),
@@ -50,6 +52,7 @@ function render(state) {
   el.roomInput.value = roomId;
   el.displayUrl.value = buildPageUrl('display.html', roomId);
   el.controlUrl.value = buildPageUrl('control.html', roomId);
+  el.clockUrl.value = buildPageUrl('clock.html', roomId);
 }
 
 async function pushState(nextState) {
@@ -159,6 +162,7 @@ function bindControls() {
 
   el.copyDisplayBtn.addEventListener('click', () => copyText(el.displayUrl.value, el.copyDisplayBtn));
   el.copyControlBtn.addEventListener('click', () => copyText(el.controlUrl.value, el.copyControlBtn));
+  el.copyClockBtn.addEventListener('click', () => copyText(el.clockUrl.value, el.copyClockBtn));
 
   window.addEventListener('keydown', async (event) => {
     if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;

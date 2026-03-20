@@ -8,23 +8,19 @@ import {
 
 const roomId = getRoomId();
 const elements = {
-  eventTitle: document.getElementById('eventTitle'),
   teamAName: document.getElementById('teamAName'),
   teamBName: document.getElementById('teamBName'),
   teamAScore: document.getElementById('teamAScore'),
   teamBScore: document.getElementById('teamBScore'),
-  roomTag: document.getElementById('roomTag'),
   status: document.getElementById('statusMessage'),
 };
 
 function render(state) {
   const safe = state || DEFAULT_STATE;
-  elements.eventTitle.textContent = safe.eventTitle;
   elements.teamAName.textContent = safe.teamAName;
   elements.teamBName.textContent = safe.teamBName;
   elements.teamAScore.textContent = safe.teamAScore;
   elements.teamBScore.textContent = safe.teamBScore;
-  elements.roomTag.textContent = `Room: ${roomId}`;
 }
 
 function showStatus(message) {
