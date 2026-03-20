@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kicker Scoreboard – Display</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="display-mode">
+  <div class="display-wrap">
+    <div class="status-banner" id="statusMessage" hidden></div>
+
+    <div class="scoreboard">
+      <div class="team team-left">
+        <div class="team-name" id="teamAName">Team A</div>
+        <div class="score" id="teamAScore">0</div>
+      </div>
+
+      <div class="middle">
+        <div class="label" id="eventTitle">Kicker Turnier</div>
+        <div class="vs">:</div>
+        <div class="hint" id="roomTag">Room: kicker-live</div>
+      </div>
+
+      <div class="team team-right">
+        <div class="team-name" id="teamBName">Team B</div>
+        <div class="score" id="teamBScore">0</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script type="module" src="display.js"></script>
+</body>
+</html>

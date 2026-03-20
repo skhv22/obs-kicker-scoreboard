@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kicker Scoreboard – Control</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="control-mode">
+  <div class="panel">
+    <div class="topbar">
+      <div>
+        <h1>Scoreboard Steuerung</h1>
+        <p class="sub">Live für OBS, GitHub Pages und iPhone</p>
+      </div>
+      <div class="badge" id="connectionBadge">Nicht verbunden</div>
+    </div>
+
+    <div class="room-box">
+      <label>
+        <span>Room-ID</span>
+        <div class="inline-row">
+          <input id="roomInput" type="text" placeholder="z. B. kicker-finale" />
+          <button id="roomOpenBtn" class="primary">Öffnen</button>
+        </div>
+      </label>
+      <p class="tiny">Nutze auf Display und Control dieselbe Room-ID.</p>
+    </div>
+
+    <div class="grid link-grid">
+      <label>
+        <span>Display-Link für OBS</span>
+        <div class="inline-row">
+          <input id="displayUrl" type="text" readonly />
+          <button id="copyDisplayBtn">Kopieren</button>
+        </div>
+      </label>
+      <label>
+        <span>Control-Link fürs Handy</span>
+        <div class="inline-row">
+          <input id="controlUrl" type="text" readonly />
+          <button id="copyControlBtn">Kopieren</button>
+        </div>
+      </label>
+    </div>
+
+    <div class="grid names">
+      <label>
+        <span>Titel</span>
+        <input id="eventTitleInput" type="text" placeholder="Kicker Turnier" />
+      </label>
+      <div></div>
+      <label>
+        <span>Linkes Team</span>
+        <input id="teamANameInput" type="text" placeholder="Team A" />
+      </label>
+      <label>
+        <span>Rechtes Team</span>
+        <input id="teamBNameInput" type="text" placeholder="Team B" />
+      </label>
+    </div>
+
+    <div class="action-row action-row-top">
+      <button id="saveNamesBtn">Namen speichern</button>
+      <button id="swapBtn">Teams tauschen</button>
+      <button id="resetBtn" class="danger">Reset</button>
+    </div>
+
+    <div class="grid scores">
+      <div class="card">
+        <div class="small-name" id="leftPreviewName">Team A</div>
+        <div class="big-score" id="leftPreviewScore">0</div>
+        <div class="btn-row">
+          <button data-action="minusA">-1</button>
+          <button data-action="plusA" class="primary">+1 Tor</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="small-name" id="rightPreviewName">Team B</div>
+        <div class="big-score" id="rightPreviewScore">0</div>
+        <div class="btn-row">
+          <button data-action="minusB">-1</button>
+          <button data-action="plusB" class="primary">+1 Tor</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="keys">
+      <strong>Tastenkürzel:</strong>
+      A = Tor links, L = Tor rechts, Z = -1 links, M = -1 rechts, R = Reset
+    </div>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script type="module" src="control.js"></script>
+</body>
+</html>
