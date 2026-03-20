@@ -4,7 +4,8 @@
 - `display.html` → in OBS als Browser Source
 - `clock.html` → in OBS als Browser Source für Uhr/Datum
 - `control.html` → auf iPhone oder Laptop zum Steuern
-- `firebase-config.template.js` → Vorlage, wird in CI zu `firebase-config.js` gebaut
+- `firebase-config.js` → Platzhalter im Repo (keine echten Werte)
+- `firebase-config.template.js` → wird in CI mit Secrets nach `firebase-config.js` gerendert
 
 ## Setup
 
